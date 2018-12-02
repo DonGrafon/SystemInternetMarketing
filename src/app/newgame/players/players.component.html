@@ -15,12 +15,12 @@
         <div class="row">
             <div class="col-5">
                 <label for="name">Имя игрока:</label>
-                <input type="text" class="form-control" id="name" placeholder="Напишите имя игрока" formControlName="name"><br>
+                <input autocomplete="off" type="text" class="form-control" id="name" placeholder="Напишите имя игрока" formControlName="name"><br>
                 <label for="email">Электронная почта:</label>
-                <input type="email" class="form-control" id="email" placeholder="Напишите Email игрока" formControlName="email">
+                <input autocomplete="off" type="email" class="form-control" id="email" placeholder="Напишите Email игрока" formControlName="email">
             </div>
             <div class="col-sm-auto">
-                <button type="button" [routerLink]="'/gameplay'" class="btn btn-success btn-lg mt-4" style="height: 108px;">Начать игру</button>
+                <button type="button" [routerLink]="'/gameplay'" class="btn btn-success btn-lg mt-4" style="height: 120px; width: 200px">Начать игру</button>
             </div>
         </div><br>
         <button type="submit" class="btn btn-primary" [disabled]="!playerForm.valid">Добавить игрока</button>
