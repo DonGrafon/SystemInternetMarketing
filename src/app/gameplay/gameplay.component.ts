@@ -11,10 +11,9 @@ import { Players } from '../shared/Players';
 export class GameplayComponent implements OnInit {
 
   players: Players[] = [];
-
   CardNumber: string[];
-
   CardNumberForm: FormGroup;
+  expanded: boolean = false;
 
   constructor(private dataService: DataService) {
     this.CardNumberForm = new FormGroup({});
@@ -24,4 +23,14 @@ export class GameplayComponent implements OnInit {
     this.players = this.dataService.getData();
   }
 
+  showCheckboxes() {
+    let checkboxes = document.getElementById("checkboxes");
+    if (!this.expanded) {
+        checkboxes.style.display = "block";
+        this.expanded = true;
+    } else {
+        checkboxes.style.display = "none";
+        this.expanded = false;
+        }
+    }
 }

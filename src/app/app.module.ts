@@ -11,7 +11,6 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { GameplayComponent } from './gameplay/gameplay.component';
 import { DataService } from './shared/services/data.service';
 import { ResultTableComponent } from './gameplay/result-table/result-table.component';
-import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { FooterComponent } from './footer/footer.component';
     PlayersComponent,
     NewgameComponent,
     GameplayComponent,
-    ResultTableComponent,
-    FooterComponent
+    ResultTableComponent
   ],
   imports: [
     BrowserModule,

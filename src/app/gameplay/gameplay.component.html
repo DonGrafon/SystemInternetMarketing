@@ -1,5 +1,5 @@
 <div class="container">
-    <h2>Администратор, введите номера испрользуемых карточек</h2>
+    <h2>Администратор, введите номера используемых карточек <span class="badge badge-secondary">через пробел</span></h2>
     <div *ngFor="let player of players; let i = index; let last = last">
         <hr>
         <div class="row">
@@ -13,7 +13,7 @@
             </div>
             <div class="col-2">
                 <form [formGroup]="CardNumberForm" (ngSubmit)="onCardNumberFormSubmit()">
-                <label for="CardNumber">Номер используемой карточки:</label><br>
+                <label for="CardNumber">Номера карточек:</label><br>
                 <input autocomplete="off" type="text" id="CardNumber" class="form-control" >
                 <button *ngIf="last" class="mt-4 btn btn-success btn-block" [disabled]="!CardNumberForm.valid" [routerLink]="'./resultTable'">Применить</button>
                 </form>

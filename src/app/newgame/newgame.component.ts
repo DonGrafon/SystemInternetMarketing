@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { DataService } from '../shared/services/data.service';
 
 @Component({
   selector: 'app-newgame',
@@ -7,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewgameComponent implements OnInit {
 
-  constructor() { }
+  NewGameForm: FormGroup;
+
+  constructor(private dataService: DataService) { 
+    this.NewGameForm = new FormGroup({
+      gameMoths: new FormControl(null, [Validators.required]),
+      monthBudget: new FormControl(null, [Validators.required, Validators.pattern(/^[0-9]+$/)])
+    });
+  }
 
   ngOnInit() {
   }
 
-  onTrying() {
-    console.log("WORKS");
-  }
+  onNewGameFormSubmit() {
+    this.dataService.addFormNewGameInfo(this.NewGameForm.value);
+    this.NewGameForm.reset();
+ }
 }
