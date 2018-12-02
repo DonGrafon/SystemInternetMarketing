@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Администратор, введите номера испрользуемых карточек</h2>
+    <div *ngFor="let player of players; let i = index; let last = last">
+        <hr>
+        <div class="row">
+            <div class="col-8">
+                <div class="border border-info rounded shadow p-3 my-1 bg-white">
+                    <div class="text-center">
+                        <span class="h5">Имя: {{player.name}} | </span>
+                        <span class="h5">Email: {{player.email}}</span>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-4">
+                <form [formGroup]="CardNumberForm" (ngSubmit)="onCardNumberFormSubmit()">
+                <label for="CardNumber">Номер используемой карточки:</label><br>
+                <input type="text" id="CardNumber" class="form-control" >
+                <button *ngIf="last" class="mt-4 btn btn-success btn-block" [disabled]="!CardNumberForm.valid">Применить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

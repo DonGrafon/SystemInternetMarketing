@@ -1,0 +1,28 @@
+<div class="container" *ngIf="isHidden == false">
+    <h2>Данные игроков</h2><br>
+    <div class="row">
+        <div *ngFor="let player of players; let i = index" class="border border-info mx-2 col-sm-auto rounded shadow p-3 mb-5 bg-white">
+            <h4 class="text-center">Игрок №{{i+1}}</h4>
+            <hr>
+            <h5 class="text-center">Имя:</h5><h6 class="text-center">{{player.name}}</h6>
+            <h5 class="text-center">Email:</h5><h6 class="text-center">{{player.email}}</h6>
+        </div>      
+    </div>
+</div>
+<div class="container">
+    <h2>Добавить нового игрока</h2><br>
+    <form [formGroup]="playerForm" (ngSubmit)="onPlayerFormSubmit()">
+        <div class="row">
+            <div class="col-5">
+                <label for="name">Имя игрока:</label>
+                <input type="text" class="form-control" id="name" placeholder="Напишите имя игрока" formControlName="name"><br>
+                <label for="email">Электронная почта:</label>
+                <input type="email" class="form-control" id="email" placeholder="Напишите Email игрока" formControlName="email">
+            </div>
+            <div class="col-sm-auto">
+                <button type="button" [routerLink]="'/gameplay'" class="btn btn-success btn-lg mt-4" style="height: 108px;">Начать игру</button>
+            </div>
+        </div><br>
+        <button type="submit" class="btn btn-primary" [disabled]="!playerForm.valid">Добавить игрока</button>
+    </form>
+</div>

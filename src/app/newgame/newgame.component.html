@@ -1,0 +1,17 @@
+<h1 class="text-center">Здравствуйте, администратор</h1>
+<div class="form-group w-50 mx-auto">
+  <form>
+    <label for="months" class="mt-3">Количество месяцев игры:</label>
+    <select class="form-control" id="months">
+      <option>3</option>
+      <option>6</option>
+      <option>9</option>
+      <option>12</option>
+    </select>
+    <label for="monthBudget" class="mt-3">Месячный бюджет каждого игрока:</label>
+    <input type="text" class="form-control" id="monthBudget" placeholder="Укажите сумму месячного бюджета в рублях">
+    <a [routerLink]="'./players'">
+      <button type="submit" class="btn btn-primary mt-3" (click)=onTrying()>Далее</button>
+    </a>
+  </form>
+</div>
