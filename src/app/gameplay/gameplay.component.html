@@ -11,11 +11,11 @@
                     </div>
                 </div> 
             </div>
-            <div class="col-4">
+            <div class="col-2">
                 <form [formGroup]="CardNumberForm" (ngSubmit)="onCardNumberFormSubmit()">
                 <label for="CardNumber">Номер используемой карточки:</label><br>
                 <input type="text" id="CardNumber" class="form-control" >
-                <button *ngIf="last" class="mt-4 btn btn-success btn-block" [disabled]="!CardNumberForm.valid">Применить</button>
+                <button *ngIf="last" class="mt-4 btn btn-success btn-block" [disabled]="!CardNumberForm.valid" [routerLink]="'./resultTable'">Применить</button>
                 </form>
             </div>
         </div>

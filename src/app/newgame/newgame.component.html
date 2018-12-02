@@ -9,7 +9,7 @@
       <option>12</option>
     </select>
     <label for="monthBudget" class="mt-3">Месячный бюджет каждого игрока:</label>
-    <input type="text" class="form-control" id="monthBudget" placeholder="Укажите сумму месячного бюджета в рублях">
+    <input autocomplete="off" type="text" class="form-control" id="monthBudget" placeholder="Укажите сумму месячного бюджета в рублях">
     <a [routerLink]="'./players'">
       <button type="submit" class="btn btn-primary mt-3" (click)=onTrying()>Далее</button>
     </a>

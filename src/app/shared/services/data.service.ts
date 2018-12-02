@@ -10,7 +10,13 @@ export class DataService {
     {name: "Alexey", email: "karpechenko.lesha@gmail.com"},
     {name: "Stephan", email: "stephanio@mail.ru"},
     {name: "Elena", email: "elena.ivanova@yandex.ru"},
-    {name: "Alexander", email: "sasha@gmail.com"}
+    {name: "Alexander", email: "sasha@gmail.com"},
+    {name: "Elena", email: "elena.ivanova@yandex.ru"},
+    {name: "Elena", email: "elena.ivanova@yandex.ru"},
+    {name: "Elena", email: "elena.ivanova@yandex.ru"},
+    {name: "Elena", email: "elena.ivanova@yandex.ru"},
+    {name: "Elena", email: "elena.ivanova@yandex.ru"},
+    {name: "Elena", email: "elena.ivanova@yandex.ru"},
   ];
 
   getData(): Players[]{

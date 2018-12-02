@@ -10,6 +10,7 @@ import { NewgameComponent } from './newgame/newgame.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { GameplayComponent } from './gameplay/gameplay.component';
 import { DataService } from './shared/services/data.service';
+import { ResultTableComponent } from './gameplay/result-table/result-table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DataService } from './shared/services/data.service';
     MainComponent,
     PlayersComponent,
     NewgameComponent,
-    GameplayComponent
+    GameplayComponent,
+    ResultTableComponent
   ],
   imports: [
     BrowserModule,

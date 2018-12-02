@@ -4,12 +4,14 @@ import { MainComponent } from './main/main.component';
 import { PlayersComponent } from './newgame/players/players.component';
 import { NewgameComponent } from './newgame/newgame.component';
 import { GameplayComponent } from './gameplay/gameplay.component';
+import { ResultTableComponent } from './gameplay/result-table/result-table.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
   {path: 'newgame', component: NewgameComponent},
   {path: 'newgame/players', component: PlayersComponent},
-  {path: 'gameplay', component: GameplayComponent}
+  {path: 'gameplay', component: GameplayComponent},
+  {path: 'gameplay/resultTable', component: ResultTableComponent}
 ];
 
 @NgModule({
