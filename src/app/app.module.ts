@@ -11,6 +11,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { GameplayComponent } from './gameplay/gameplay.component';
 import { DataService } from './shared/services/data.service';
 import { ResultTableComponent } from './gameplay/result-table/result-table.component';
+import { ScenariosComponent } from './newgame/scenarios/scenarios.component';
+import { NewscenarioComponent } from './newgame/scenarios/newscenario/newscenario.component';
+import { ScenarioinfoComponent } from './newgame/scenarios/scenarioinfo/scenarioinfo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ResultTableComponent } from './gameplay/result-table/result-table.compo
     PlayersComponent,
     NewgameComponent,
     GameplayComponent,
-    ResultTableComponent
+    ResultTableComponent,
+    ScenariosComponent,
+    NewscenarioComponent,
+    ScenarioinfoComponent
   ],
   imports: [
     BrowserModule,
