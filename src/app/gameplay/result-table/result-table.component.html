@@ -1,27 +1,48 @@
 <div class="container">
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th scope="col">Игроки</th>
-        <th scope="col">Показатель 1</th>
-        <th scope="col">Показатель 2</th>
-        <th scope="col">Показатель 3</th>
-        <th scope="col">Показатель 4</th>
-        <th scope="col">Показатель 5</th>
-      </tr>
-    </thead>
-    <tbody> 
-      <tr *ngFor="let player of players">
-        <th scope="row">{{player.name}}</th>
-        <td class="table-success">+0.5%</td>
-        <td class="table-danger">-1.2%</td>
-        <td class="table-success">+0.5%</td>
-        <td class="table-danger">-1.2%</td>
-        <td class="table-success">+0.5%</td>
-      </tr>
-    </tbody>
-  </table>
-  <a [routerLink]="'../../gameplay'">
-  <button class="btn btn-success">Следующий ход</button>
-  </a>
-</div>
+    <span *ngFor="let player of players" class="tab pt-2 pr-auto pl-auto">{{player.name}}</span>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Игроки</th>
+          <th scope="col">Месяц 1</th>
+          <th scope="col">Месяц 2</th>
+          <th scope="col">Месяц 3</th>
+        </tr>
+      </thead>
+      <tbody> 
+        <tr>
+          <th scope="row">Показатель 1</th>
+          <td class="table-success">+0.5%</td>
+          <td class="table-danger">-1.2%</td>
+          <td class="table-success">+0.5%</td>
+        </tr>
+        <tr>
+          <th scope="row">Показатель 2</th>
+          <td class="table-success">+0.5%</td>
+          <td class="table-danger">-1.2%</td>
+          <td class="table-success">+0.5%</td>
+        </tr>
+        <tr>
+          <th scope="row">Показатель 3</th>
+          <td class="table-success">+0.5%</td>
+          <td class="table-danger">-1.2%</td>
+          <td class="table-success">+0.5%</td>
+        </tr>
+        <tr>
+          <th scope="row">Показатель 4</th>
+          <td class="table-success">+0.5%</td>
+          <td class="table-danger">-1.2%</td>
+          <td class="table-success">+0.5%</td>
+        </tr>
+        <tr>
+          <th scope="row">Показатель 5</th>
+          <td class="table-success">+0.5%</td>
+          <td class="table-danger">-1.2%</td>
+          <td class="table-success">+0.5%</td>
+        </tr>
+      </tbody>
+    </table>
+    <a [routerLink]="'../../gameplay'">
+    <button class="btn btn-success">Следующий ход</button>
+    </a>
+  </div>

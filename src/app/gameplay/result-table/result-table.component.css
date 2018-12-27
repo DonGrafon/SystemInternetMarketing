@@ -1,0 +1,22 @@
+span {
+position: relative;
+display: inline-block;
+margin-right: 5px;
+margin-left: 10px;
+padding: 0 20px;
+}
+
+span::before {
+content: '';
+position: absolute;
+top: 0; right: 0; bottom: 0; left: 0;
+z-index: -1;
+background: skyblue;
+transform: perspective(4px) rotateX(1deg);
+}
+span.tab::before {
+border-radius: 10px 10px 0 0;
+}
+span.tab:active {
+    border: 2px solid green;
+}
