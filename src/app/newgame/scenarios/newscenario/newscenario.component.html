@@ -1,6 +1,7 @@
 <h1 class="text-center">Добавить новый сценарий</h1>
 <div class="container col-6">
-  <form class="border p-2">
+  <form>
+    <div class="border p-2">
     <h3>Трафик на сайт:</h3>
     <div class="form-group row">
       <label for="tOrganic" class="col-sm-4 col-form-label">Органика:</label>
@@ -94,5 +95,7 @@
         <input type="text" class="form-control" id="turnover" placeholder="Товарооборот">
       </div>
     </div>
+    </div>
+    <p class="psubmit"><button type="submit" class="btn btn-success" (click)="onSubmitClick()">Добавить сценарий</button></p>
   </form>
 </div>

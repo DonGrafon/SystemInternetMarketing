@@ -7,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScenariosComponent implements OnInit {
 
-
-
   constructor() { }
 
   ngOnInit() {
   }
 
+  onDelete(){
+    if(confirm("Вы уверены, что хотите удалить сценарий №1?")==true){
+      alert("Сценарий успешно удалён")
+    }
+  }
 }

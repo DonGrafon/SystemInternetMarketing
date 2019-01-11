@@ -12,4 +12,8 @@ export class NewscenarioComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmitClick(){
+    alert("Сценарий успешно добавлен");
+    document.location.href = "../newgame/scenarios";
+  }
 }
