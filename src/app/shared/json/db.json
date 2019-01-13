@@ -20,8 +20,27 @@
       "turnover": ""
     },
     {
-      "scenarioname": "Scenario №2",
+      "scenarioname": "Сценарий №1",
       "id": 1,
+      "tOrganic": "",
+      "tReklamaCont": "",
+      "tReklamaSocial": "",
+      "tSocialMedia": "",
+      "tDirectEntry": "",
+      "zOrganic": "",
+      "zReklamaCont": "",
+      "zReklamaSocial": "",
+      "zSocialMedia": "",
+      "zDirectEntry": "",
+      "totalClients": "",
+      "avgCheck": "",
+      "realCost": "",
+      "predelCost": "",
+      "turnover": ""
+    },
+    {
+      "scenarioname": "Сценарий №1",
+      "id": 3,
       "tOrganic": "",
       "tReklamaCont": "",
       "tReklamaSocial": "",

@@ -30,7 +30,8 @@ export class ScenariosComponent implements OnInit {
   onDelete(i: number){
     if(confirm("Вы уверены, что хотите удалить?")==true){
       this.scenarioService.deleteScenarioById(i);
-      alert("Сценарий успешно удалён")
+      alert("Сценарий успешно удалён");
+      location.reload
     }
   }
 }

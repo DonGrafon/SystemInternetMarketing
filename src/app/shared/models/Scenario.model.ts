@@ -19,3 +19,22 @@ export class Scenario {
         turnover: string
         ) {}
 }
+// {
+//     "scenarioname": "Сценарий №1",
+//     "id": 0,
+//     "tOrganic": "",
+//     "tReklamaCont": "",
+//     "tReklamaSocial": "",
+//     "tSocialMedia": "",
+//     "tDirectEntry": "",
+//     "zOrganic": "",
+//     "zReklamaCont": "",
+//     "zReklamaSocial": "",
+//     "zSocialMedia": "",
+//     "zDirectEntry": "",
+//     "totalClients": "",
+//     "avgCheck": "",
+//     "realCost": "",
+//     "predelCost": "",
+//     "turnover": ""
+//   }
