@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Players } from '../Players'; 
-import { CardsTable } from '../CardsTable';
+import { Players } from '../models/Players.model'; 
+import { CardsTable } from '../models/CardsTable.model';
 
 @Injectable({
   providedIn: 'root'
@@ -42,3 +42,4 @@ export class DataService {
 
   constructor() { }
 }
+// id игры, кол-во игроков (name, email, score)

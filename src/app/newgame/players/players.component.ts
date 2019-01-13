@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { DataService } from '../../shared/services/data.service';
-import { Players } from '../../shared/Players';
+import { Players } from '../../shared/models/Players.model';
 
 @Component({
   selector: 'app-players',

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Scenario } from 'src/app/shared/models/Scenario.model';
+import { ScenarioService } from 'src/app/shared/services/scenario.service';
+import { Router } from '@angular/router';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-scenarios',
@@ -7,13 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScenariosComponent implements OnInit {
 
-  constructor() { }
+  scenarios: Scenario[];
 
-  ngOnInit() {
+  constructor(
+    private scenarioService: ScenarioService,
+    private router: Router
+  ) { }
+
+  async ngOnInit() {
+    try {
+      let scenarios = this.scenarioService.getScenarios();
+      this.scenarios = (isNullOrUndefined(await scenarios)) ? [] : await scenarios;
+    } catch (err) {
+      console.error(err);
+    }
   }
 
-  onDelete(){
-    if(confirm("Вы уверены, что хотите удалить сценарий №1?")==true){
+  onDelete(i: number){
+    if(confirm("Вы уверены, что хотите удалить?")==true){
+      this.scenarioService.deleteScenarioById(i);
       alert("Сценарий успешно удалён")
     }
   }

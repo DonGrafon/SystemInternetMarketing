@@ -14,6 +14,8 @@ import { ResultTableComponent } from './gameplay/result-table/result-table.compo
 import { ScenariosComponent } from './newgame/scenarios/scenarios.component';
 import { NewscenarioComponent } from './newgame/scenarios/newscenario/newscenario.component';
 import { ScenarioinfoComponent } from './newgame/scenarios/scenarioinfo/scenarioinfo.component';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ScenarioinfoComponent } from './newgame/scenarios/scenarioinfo/scenario
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
