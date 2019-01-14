@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ScenarioService } from 'src/app/shared/services/scenario.service';
-import { Scenario } from 'src/app/shared/models/Scenario.model';
-import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-newscenario',
@@ -37,16 +35,12 @@ export class NewscenarioComponent implements OnInit {
   onScenarioFormSubmit(){
     this.scenarioService.postScenario(this.scenarioForm.value);
     this.scenarioForm.reset();
-  }
-
-  async ngOnInit() {
-
-  }
-
-  onSubmitClick(){
     alert("Сценарий успешно добавлен");
-    //document.location.href = "../newgame/scenarios";
+    document.location.href = "../newgame/scenarios";
   }
 
+  ngOnInit() {
+
+  }
 
 }
