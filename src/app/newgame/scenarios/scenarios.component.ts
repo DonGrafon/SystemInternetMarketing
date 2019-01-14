@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Scenario } from 'src/app/shared/models/Scenario.model';
 import { ScenarioService } from 'src/app/shared/services/scenario.service';
 import { Router } from '@angular/router';
@@ -14,8 +14,7 @@ export class ScenariosComponent implements OnInit {
   scenarios: Scenario[];
 
   constructor(
-    private scenarioService: ScenarioService,
-    private router: Router
+    private scenarioService: ScenarioService
   ) { }
 
   async ngOnInit() {
@@ -31,7 +30,11 @@ export class ScenariosComponent implements OnInit {
     if(confirm("Вы уверены, что хотите удалить?")==true){
       this.scenarioService.deleteScenarioById(i);
       alert("Сценарий успешно удалён");
-      location.reload
+      location.reload();
     }
+  }
+
+  onClickInfo(i: number){
+    this.scenarioService.setId(i);
   }
 }

@@ -1,4 +1,4 @@
-<h1 class="text-center"><span class="shadowbox bg-white rounded p-2">Информация о сценарии №1</span></h1>
+<h1 class="text-center"><span class="shadowbox bg-white rounded p-2">Информация о "{{scenario.scenarioname}}"</span></h1>
 <p>
 <div class="container w-50">
   <div class="col border bg-white shadowbox rounded">
@@ -10,7 +10,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Органика:</p>
       </div>
       <div class="col pt-2">
-        <p style="font-size: 20px">20.000 руб.</p>
+        <p style="font-size: 20px">{{scenario.tOrganic}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -18,7 +18,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Реклама контекстная:</p>
       </div>
       <div class="col">
-        <p style="font-size: 20px">20.000 руб.</p>
+        <p style="font-size: 20px">{{scenario.tReklamaCont}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -26,7 +26,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Реклама по социальным сетям:</p>
       </div>
       <div class="col">
-          <p style="font-size: 20px">20.000 руб.</p>
+          <p style="font-size: 20px">{{scenario.tReklamaSocial}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -34,7 +34,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Социальные медиа:</p>
       </div>
       <div class="col">
-          <p style="font-size: 20px">20.000 руб.</p>
+          <p style="font-size: 20px">{{scenario.tSocialMedia}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -42,7 +42,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Прямой заход:</p>
       </div>
       <div class="col">
-          <p style="font-size: 20px">20.000 руб.</p>
+          <p style="font-size: 20px">{{scenario.tDirectEntry}} руб.</p>
       </div>
     </div>
     <div class="row border-bottom p-2 border-top">
@@ -53,7 +53,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Органика:</p>
       </div>
       <div class="col pt-2">
-        <p style="font-size: 20px">20.000 руб.</p>
+        <p style="font-size: 20px">{{scenario.zOrganic}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -61,7 +61,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Реклама контекстная:</p>
       </div>
       <div class="col">
-        <p style="font-size: 20px">20.000 руб.</p>
+        <p style="font-size: 20px">{{scenario.zReklamaCont}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -69,7 +69,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Реклама по социальным сетям:</p>
       </div>
       <div class="col">
-          <p style="font-size: 20px">20.000 руб.</p>
+          <p style="font-size: 20px">{{scenario.zReklamaSocial}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -77,7 +77,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Социальные медиа:</p>
       </div>
       <div class="col">
-          <p style="font-size: 20px">20.000 руб.</p>
+          <p style="font-size: 20px">{{scenario.zSocialMedia}} руб.</p>
       </div>
     </div>
     <div class="row">
@@ -85,7 +85,7 @@
         <p class="font-weight-bold" style="font-size: 20px">Прямой заход:</p>
       </div>
       <div class="col">
-          <p style="font-size: 20px">20.000 руб.</p>
+          <p style="font-size: 20px">{{scenario.zDirectEntry}} руб.</p>
       </div>
     </div>
     <div class="row border-top">
@@ -93,7 +93,7 @@
             <h3 class="font-weight-bold pt-2">Всего клиентов:</h3>
           </div>
           <div class="col pt-3">
-              <p style="font-size: 20px">20.000</p>
+              <p style="font-size: 20px">{{scenario.totalClients}}</p>
           </div>
     </div>
     <div class="row border-top">
@@ -101,7 +101,7 @@
             <h3 class="font-weight-bold pt-2">Средний чек:</h3>
           </div>
           <div class="col pt-3">
-              <p style="font-size: 20px">5.000 руб.</p>
+              <p style="font-size: 20px">{{scenario.avgCheck}} руб.</p>
           </div>
     </div>
     <div class="row border-top">
@@ -109,7 +109,7 @@
             <h5 class="font-weight-bold pt-2">Реальная стоимость привлечения одного клиента:</h5>
           </div>
           <div class="col pt-4">
-              <p style="font-size: 20px">5.000 руб.</p>
+              <p style="font-size: 20px">{{scenario.realCost}} руб.</p>
           </div>
     </div>
     <div class="row border-top">
@@ -117,7 +117,7 @@
             <h5 class="font-weight-bold pt-2">Предельная стоимость привлечения одного клиента:</h5>
           </div>
           <div class="col pt-4">
-              <p style="font-size: 20px">10.000 руб.</p>
+              <p style="font-size: 20px">{{scenario.predelCost}} руб.</p>
           </div>
     </div>
     <div class="row border-top">
@@ -125,7 +125,7 @@
             <h5 class="font-weight-bold pt-3">Товарооборот:</h5>
           </div>
           <div class="col pt-3">
-              <p style="font-size: 20px">10.000 руб.</p>
+              <p style="font-size: 20px">{{scenario.turnover}} руб.</p>
           </div>
     </div>
   </div>

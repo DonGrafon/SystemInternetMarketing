@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ScenarioService } from 'src/app/shared/services/scenario.service';
+import { Scenario } from 'src/app/shared/models/Scenario.model';
+import { isNullOrUndefined } from 'util';
 
 @Component({
   selector: 'app-scenarioinfo',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScenarioinfoComponent implements OnInit {
 
-  constructor() { }
+  scenario: Scenario;
 
-  ngOnInit() {
+  id: number = this.scenarioService.getId();
+  constructor(
+    private scenarioService: ScenarioService
+    ) {}
+
+  async ngOnInit() {
+    try {
+      let scenario = this.scenarioService.getScenarioId(this.id);
+      this.scenario = (isNullOrUndefined(await scenario)) ? [] : await scenario;
+    } catch(err) {
+      console.error(err);
+    }
   }
-
 }

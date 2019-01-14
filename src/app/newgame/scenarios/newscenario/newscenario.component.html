@@ -1,42 +1,43 @@
-<h1 class="text-center bg-white shadowbox">Добавить новый сценарий</h1>
+<h1 class="text-center"><span class=" bg-white shadowbox rounded p-2">Добавить новый сценарий</span></h1>
+<p>
 <div class="container col-6">
-  <form>
-    <div class="border p-2 shadowbox border">
+  <form [formGroup]="scenarioForm" (ngSubmit)="onScenarioFormSubmit()">
+    <div class="border p-2 shadowbox bg-white rounded">
     <div class="form-group row">
         <label for="scenarioname" class="col-sm-4 col-form-label"><span class="h5">Название сценария:</span></label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="scenarioname" placeholder="Название сценария">
+          <input type="text" class="form-control" formControlName="scenarioname" placeholder="Название сценария">
         </div>
     </div>
     <h3>Трафик на сайт:</h3>
     <div class="form-group row">
       <label for="tOrganic" class="col-sm-4 col-form-label">Органика:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="tOrganic" placeholder="Органика">
+        <input type="text" class="form-control" formControlName="tOrganic" placeholder="Органика">
       </div>
     </div>
     <div class="form-group row">
       <label for="tReklamaCont" class="col-sm-4 col-form-label">Реклама контекстная:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="tReklamaCont" placeholder="Реклама контекстная">
+        <input type="text" class="form-control" formControlName="tReklamaCont" placeholder="Реклама контекстная">
       </div>
     </div>
     <div class="form-group row">
       <label for="tReklamaSocial" class="col-sm-4 col-form-label">Реклама по социальным сетям:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="tReklamaSocial" placeholder="Реклама по социальным сетям">
+        <input type="text" class="form-control" formControlName="tReklamaSocial" placeholder="Реклама по социальным сетям">
       </div>
     </div>
     <div class="form-group row">
       <label for="tSocialMedia" class="col-sm-4 col-form-label">Социальные медиа:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="tSocialMedia" placeholder="Социальные медиа">
+        <input type="text" class="form-control" formControlName="tSocialMedia" placeholder="Социальные медиа">
       </div>
     </div>
     <div class="form-group row">
       <label for="tDirectEntry" class="col-sm-4 col-form-label">Прямой заход:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="tDirectEntry" placeholder="Прямой заход">
+        <input type="text" class="form-control" formControlName="tDirectEntry" placeholder="Прямой заход">
       </div>
     </div>
 
@@ -44,64 +45,64 @@
     <div class="form-group row">
       <label for="zOrganic" class="col-sm-4 col-form-label">Органика:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="zOrganic" placeholder="Органика">
+        <input type="text" class="form-control" formControlName="zOrganic" placeholder="Органика">
       </div>
     </div>
     <div class="form-group row">
       <label for="zReklamaCont" class="col-sm-4 col-form-label">Реклама контекстная:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="zReklamaCont" placeholder="Реклама контекстная">
+        <input type="text" class="form-control" formControlName="zReklamaCont" placeholder="Реклама контекстная">
       </div>
     </div>
     <div class="form-group row">
       <label for="zReklamaSocial" class="col-sm-4 col-form-label">Реклама по социальным сетям:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="zReklamaSocial" placeholder="Реклама по социальным сетям">
+        <input type="text" class="form-control" formControlName="zReklamaSocial" placeholder="Реклама по социальным сетям">
       </div>
     </div>
     <div class="form-group row">
       <label for="zSocialMedia" class="col-sm-4 col-form-label">Социальные медиа:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="zSocialMedia" placeholder="Социальные медиа">
+        <input type="text" class="form-control" formControlName="zSocialMedia" placeholder="Социальные медиа">
       </div>
     </div>
     <div class="form-group row">
       <label for="zDirectEntry" class="col-sm-4 col-form-label">Прямой заход:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="zDirectEntry" placeholder="Прямой заход">
+        <input type="text" class="form-control" formControlName="zDirectEntry" placeholder="Прямой заход">
       </div>
     </div>
     <div class="form-group row">
       <label for="totalClients" class="col-sm-4 col-form-label"><span class="h3">Всего клиентов:</span></label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="totalClients" placeholder="Всего клиентов">
+        <input type="text" class="form-control" formControlName="totalClients" placeholder="Всего клиентов">
       </div>
     </div>
     <div class="form-group row">
       <label for="avgCheck" class="col-sm-4 col-form-label"><span class="h3">Средний чек:</span></label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="avgCheck" placeholder="Средний чек">
+        <input type="text" class="form-control" formControlName="avgCheck" placeholder="Средний чек">
       </div>
     </div>
     <div class="form-group row">
       <label for="realCost" class="col-sm-4 col-form-label">Реальная стоимость привлечения одного клиента:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="realCost" placeholder="Реальная стоимость привлечения одного клиента">
+        <input type="text" class="form-control" formControlName="realCost" placeholder="Реальная стоимость привлечения одного клиента">
       </div>
     </div>
     <div class="form-group row">
       <label for="predelCost" class="col-sm-4 col-form-label">Предельная стоимость привлечения одного клиента:</label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="predelCost" placeholder="Предельная стоимость привлечения одного клиента">
+        <input type="text" class="form-control" formControlName="predelCost" placeholder="Предельная стоимость привлечения одного клиента">
       </div>
     </div>
     <div class="form-group row">
       <label for="turnover" class="col-sm-4 col-form-label"><span class="h3">Товарооборот:</span></label>
       <div class="col-sm-8">
-        <input type="text" class="form-control" id="turnover" placeholder="Товарооборот">
+        <input type="text" class="form-control" formControlName="turnover" placeholder="Товарооборот">
       </div>
     </div>
     </div>
-    <p class="psubmit"><button type="submit" class="btn btn-success" (click)="onSubmitClick()">Добавить сценарий</button></p>
+    <p class="psubmit"><button type="submit" class="btn btn-success" [disabled]="!scenarioForm.valid">Добавить сценарий</button></p>
   </form>
 </div>
