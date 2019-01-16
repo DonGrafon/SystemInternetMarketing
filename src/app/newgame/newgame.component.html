@@ -1,10 +1,12 @@
-<h1 class="text-center">Здравствуйте, администратор</h1>
+<h1 class="text-center"><span class="shadowbox bg-white rounded p-2">Здравствуйте, администратор</span></h1>
 <div class="form-group w-50 mx-auto">
+  <div class="shadowbox bg-white rounded p-2 mt-2">
     <h2 class="text-center">Правила игры</h2>
     <p>Участники являются представителями компаний, который действуют на отпределенном рынке.<br>
     У каждого участника есть месячный бюджет на продвижение, который он может распределять по инструментам ИМ.
     Применение каждого инструмента приводит к тому, что показатели ИМ меняются либо в этом месяце, либо в последующие.</p>
-  <form [formGroup]="NewGameForm" (ngSubmit)="onNewGameFormSubmit()">
+  </div>
+  <form [formGroup]="NewGameForm" (ngSubmit)="onNewGameFormSubmit()" class="bg-white rounded p-2 mt-3 shadowbox">
     <label for="months" class="mt-3">Количество месяцев игры:</label>
     <select formControlName="gameMoths" class="form-control" id="months">
       <option>3</option>

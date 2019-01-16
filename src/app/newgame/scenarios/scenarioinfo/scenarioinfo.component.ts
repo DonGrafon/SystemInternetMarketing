@@ -10,7 +10,7 @@ import { isNullOrUndefined } from 'util';
 })
 export class ScenarioinfoComponent implements OnInit {
 
-  scenario: Scenario;
+  scenario: any;
 
   id: number = this.scenarioService.getId();
   constructor(

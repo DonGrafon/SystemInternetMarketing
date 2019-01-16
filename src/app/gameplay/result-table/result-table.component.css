@@ -20,3 +20,7 @@ border-radius: 10px 10px 0 0;
 span.tab:active {
     border: 2px solid green;
 }
+
+.shadowbox {
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
